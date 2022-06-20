@@ -23,5 +23,4 @@ public class HearingInterpreterYannyTest {
 
         assertEquals("Yanny", word);
     }
-
 }

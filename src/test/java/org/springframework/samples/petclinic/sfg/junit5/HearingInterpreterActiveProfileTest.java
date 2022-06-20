@@ -10,6 +10,9 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Created by jt on 2019-02-18.
+ */
 @ActiveProfiles("yanny")
 @SpringJUnitConfig(classes = HearingInterpreterActiveProfileTest.TestConfig.class)
 public class HearingInterpreterActiveProfileTest {
@@ -17,6 +20,7 @@ public class HearingInterpreterActiveProfileTest {
     @Configuration
     @ComponentScan("org.springframework.samples.petclinic.sfg")
     static class TestConfig {
+
     }
 
     @Autowired
@@ -28,5 +32,4 @@ public class HearingInterpreterActiveProfileTest {
 
         assertEquals("Yanny", word);
     }
-
 }

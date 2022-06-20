@@ -13,18 +13,17 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ActiveProfiles("inner-class")
-@SpringJUnitConfig(classes = HearingInterpreterClassTest.TestConfig.class)
-class HearingInterpreterClassTest {
+@SpringJUnitConfig(classes = HearingInterpreterInnerClassTest.TestConfig.class)
+class HearingInterpreterInnerClassTest {
 
     @Profile("inner-class")
     @Configuration
     static class TestConfig {
 
         @Bean
-        HearingInterpreter hearingInterpreter() {
+        HearingInterpreter hearingInterpreter(){
             return new HearingInterpreter(new LaurelWordProducer());
         }
-
     }
 
     @Autowired

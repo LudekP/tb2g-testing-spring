@@ -7,7 +7,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @ActiveProfiles("base-test")
 @RunWith(SpringRunner.class)
@@ -20,6 +20,7 @@ public class HearingInterpreterTest {
     @Test
     public void whatIheard() {
         String word = hearingInterpreter.whatIheard();
+
 
         assertEquals("Laurel", word);
     }
